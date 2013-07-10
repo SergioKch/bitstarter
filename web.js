@@ -4,7 +4,7 @@ var fs = require('fs');
  
 var app = express.createServer(express.logger());
 
-var buffer = new Buffer(30);
+var buffer = new Buffer(5000);
 
 var data = '';
 
