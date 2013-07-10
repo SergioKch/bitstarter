@@ -9,7 +9,7 @@ var buffer = new Buffer("Something wrong..", "utf-8");
 
 
 app.get('/', function(request, response) {
-    fs.readFile('/index.html', function(err, data) {
+    fs.readFileSync('index.html', function(err, data) {
     if (err) throw err;
     buffer.write(data, "utf-8"); 
     });
