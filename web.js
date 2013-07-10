@@ -4,7 +4,7 @@ var express = require('express');
  
 var app = express.createServer(express.logger());
 
-var buffer = new Buffer();
+var buffer = new Buffer("Something wrong..", "utf-8");
 
 app.get('/', function(request, response) {
   fs.readFile('index.html', function(err, data) {
