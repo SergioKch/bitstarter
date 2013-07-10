@@ -8,9 +8,9 @@ app.get('/', function(request, response) {
 
      
     var data = fs.readFileSync('index.html', 'utf-8');
-    var len = data.lenght;
-    var buffer = new Buffer(data.lenght);
-    buffer.write(data, "utf-8"); 
+    //var len = data.lenght;
+    var buffer = new Buffer(data);
+    //buffer.write(data, "utf-8"); 
     response.send(buffer.toString('utf-8')); 
 });
 
