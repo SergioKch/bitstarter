@@ -9,10 +9,10 @@ var buffer = new Buffer("Something wrong..", "utf-8");
 
 
 app.get('/', function(request, response) {
-    fs.readFileSync('index.html', function(err, data) {
-    if (err) throw err;
-    buffer.write(data, "utf-8"); 
-    });
+    //fs.readFileSync('index.html', function(err, data) {
+    //if (err) throw err;
+    buffer.write(fs.readFileSync('index.html')); 
+    //});
 
   response.send(buffer.toString()); 
 });
